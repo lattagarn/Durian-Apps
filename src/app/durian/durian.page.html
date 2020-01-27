@@ -1,0 +1,25 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <div class="title-block">
+      <img src="../assets/img/i1.png" text-center>
+  </div>
+
+<ion-header>
+</ion-header>
+
+<p></p>
+
+<ion-list>
+  <ion-item *ngFor="let note of (notes | async)">
+    <ion-label>
+      <h2>{{note.name}}</h2>
+
+    </ion-label>
+    <ion-button slot="start" fill="outline" slot="end" color="dark" [routerLink]="'/view-note/' + note.id">ชมสวน</ion-button>
+    <ion-button  href="{{note.link}}" slot="start" fill="outline" slot="end" color="dark">ซื้อ</ion-button>
+
+  </ion-item>
+</ion-list>
+</ion-content>

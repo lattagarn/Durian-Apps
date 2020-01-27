@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title text-center><ion-text color="dark">เขียนรีวิว</ion-text></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-input placeholder="ชื่อผู้รีวิว" [(ngModel)]="note.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-textarea rows="3" [(ngModel)]="note.detail" placeholder="เขียนรีวิว"></ion-textarea>
+  </ion-item>
+</ion-list>
+  <ion-button color="warning" expand="full" (click)="addNote()"><ion-text color="dark">รีวิว</ion-text></ion-button>
+</ion-content>

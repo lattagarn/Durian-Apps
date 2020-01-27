@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title text-center><ion-text color="dark">รีวิว</ion-text></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab color="warning" vertical="bottom" horizontal="end" slot="fixed" color="warning">
+    <ion-fab-button [routerLink]="'/review-add'">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+<ion-header>
+</ion-header>
+
+<p></p>
+
+<ion-list>
+  <ion-item *ngFor="let note of (notes | async)">
+    <ion-label>
+      <h2>{{note.detail}}</h2>
+      <p text-right>เขียนโดย : {{note.name}}</p>
+      <p></p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="home()">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>สวน</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="callNow('18001010101')">
+          <ion-icon name="call"></ion-icon>
+          <ion-label>โทร</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="maps()">
+          <ion-icon name="map"></ion-icon>
+          <ion-label>แผนที่</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="review()">
+          <ion-icon name="star-half"></ion-icon>
+          <ion-label>รีวิว</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+      </ion-toolbar>
+</ion-footer>

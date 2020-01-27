@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title text-center><ion-text color="dark">
+    แผนที่{{note.name}}
+    </ion-text></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>{{note.lat}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <div #map class="map"></div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="home()">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>สวน</ion-label>
+        </ion-tab-button>
+    
+      
+        <ion-tab-button (click)="callNow()">
+          <ion-icon name="call"></ion-icon>
+          <ion-label>โทร</ion-label>
+        </ion-tab-button>
+   
+        <ion-tab-button (click)="maps()">
+          <ion-icon name="map"></ion-icon>
+          <ion-label>แผนที่</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="review()">
+          <ion-icon name="star-half"></ion-icon>
+          <ion-label>รีวิว</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+      </ion-toolbar>
+</ion-footer>

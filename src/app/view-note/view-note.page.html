@@ -1,0 +1,64 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <div class="title-block">
+    <img src="{{note.img}}" text-center>
+  </div>
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>{{note.name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p align="justify">ที่ตั้งสวน : {{note.address}}</p>
+        <p align="justify">{{note.time}}</p>
+      <br>
+    </ion-card-content>
+  </ion-card>
+<p></p>
+  <div text-center>
+    <ion-button color="warning">
+      <ion-text color="dark">
+      <h4>สวนเครือข่าย</h4>
+      </ion-text>
+      </ion-button>
+      </div>
+  <p>
+
+    <img src="/assets/img/map.png" text-center>
+
+</p>
+
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="home()">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>สวน</ion-label>
+        </ion-tab-button>
+    
+      
+        <ion-tab-button (click)="callNow()">
+          <ion-icon name="call"></ion-icon>
+          <ion-label>โทร</ion-label>
+        </ion-tab-button>
+   
+        <ion-tab-button [routerLink]="'/maps/' + note.id">
+          <ion-icon name="map"></ion-icon>
+          <ion-label>แผนที่</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button (click)="review()">
+          <ion-icon name="star-half"></ion-icon>
+          <ion-label>รีวิว</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+      </ion-toolbar>
+</ion-footer>
